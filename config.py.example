@@ -1,0 +1,21 @@
+# config.py
+
+import os
+
+OPENAI_API_KEY = ""
+HUGGINGFACEHUB_API_TOKEN = ""
+GOOGLE_APPLICATION_CREDENTIALS = "/root/.config/gcloud/application_default_credentials.json"
+GOOGLE_CLOUD_PROJECT = ""
+
+# I'm omitting all other keys
+def set_environment():
+    os.environ["OPENAI_API_KEY"] = str(OPENAI_API_KEY)
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = str(HUGGINGFACEHUB_API_TOKEN)
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(GOOGLE_APPLICATION_CREDENTIALS)
+    os.environ["GOOGLE_CLOUD_PROJECT"] = str(GOOGLE_CLOUD_PROJECT)
+    
+    return ["OPENAI_API_KEY", "HUGGINGFACEHUB_API_TOKEN", "GOOGLE_APPLICATION_CREDENTIALS", "GOOGLE_CLOUD_PROJECT"]
+
+# Call set_environment and print the environment variables that are set
+print(set_environment())
+
