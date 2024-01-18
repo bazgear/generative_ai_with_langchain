@@ -123,6 +123,11 @@ You can find more details about API credentials and setup in chapter 3 of the bo
 
 
 ## Contributing
+Authenticate locally in the container for Google services
+gcloud auth application-default login
+
+
+## Contributing
 
 If you find anything amiss with the notebooks or dependencies, please feel free to create a pull request.
 
