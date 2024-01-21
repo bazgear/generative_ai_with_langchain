@@ -25,7 +25,7 @@ RUN conda update -n base -c defaults conda -y && conda --version
 
 # Update the environment:
 COPY langchain_ai.yaml .
-COPY notebooks ./notebooks
+# COPY notebooks ./notebooks
 RUN conda env update --name base --file langchain_ai.yaml -vv
 
 WORKDIR /home
