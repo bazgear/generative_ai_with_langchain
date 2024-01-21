@@ -33,3 +33,5 @@ __pycache__/
 
 # Logs
 logs/
+
+\# config.py
