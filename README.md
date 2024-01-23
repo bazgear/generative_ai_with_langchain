@@ -80,9 +80,12 @@ export PIP_DEFAULT_TIMEOUT=100
 There's a [docker](https://www.docker.com/) file for the environment as well. It uses the docker environment and starts an ipython notebook. To use it, first build it, and then run it:
 
 ```bash
-docker build -t langchain_ai .
+docker build -t langchain_ai:2.0 .
 docker run -d -p 8888:8888 --memory 4g -v /Users/barry/MySites/generative_ai_with_langchain/config.py:/notebooks/config.py -v /Users/barry/MySites/generative_ai_with_langchain/notebooks:/notebooks --name langchain_ai_image langchain_ai
 ```
+
+### Has to run to get local model working
+pip install accelerate
 
 You should be able to find the notebook in your browser at [http://localhost:8888](http://localhost:8888).
 
